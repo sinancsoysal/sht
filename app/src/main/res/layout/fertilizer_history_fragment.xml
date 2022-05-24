@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/function_bg1">
+    android:background="@color/colorPrimary">
 
     <EditText
         android:id="@+id/SearchBar"

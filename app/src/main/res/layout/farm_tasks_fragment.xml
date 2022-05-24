@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/function_bg1">
+    android:background="@color/colorPrimary">
 
     <EditText
         android:id="@+id/SearchBar"
@@ -14,7 +14,8 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/searchbar"
+        android:backgroundTint="@color/green"
+        android:backgroundTintMode="src_in"
         android:ems="10"
         android:gravity="center"
         android:hint="@string/SearchHere"

@@ -259,6 +259,22 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
         transaction.commit();
     }
 
+    public void navigateToCategories(View view){
+        toolbar.setTitle("Categories");
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        CategoriesFragment categoriesFragment = new CategoriesFragment();
+        transaction.replace(R.id.container, categoriesFragment);
+        transaction.commit();
+    }
+
+    public void navigateToScanner(View view){
+        toolbar.setTitle("Tag Scanner");
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        Scanner scanner = new Scanner();
+        transaction.replace(R.id.container, scanner);
+        transaction.commit();
+    }
+
     public void navigateToAddAnimalEvent(View view){
         toolbar.setTitle("Animal Events");
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();

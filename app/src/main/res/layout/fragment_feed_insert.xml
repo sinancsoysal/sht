@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/mask_group_2"
+    android:background="@color/colorPrimary"
     android:isScrollContainer="true"
     android:orientation="vertical"
     tools:context=".MedicalIsertFragment">
@@ -14,14 +14,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
         <TextView
             android:id="@+id/addNewFeed"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:text="Add New Feed"
             android:textAlignment="center"
             android:textColor="@color/theameGreen"
-            android:layout_marginTop="10dp"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -151,6 +152,7 @@
                 android:soundEffectsEnabled="false"
                 android:textColor="@color/textColorSecondary"
                 android:textColorHint="@color/theameGreen" />
+
             <TextView
                 android:id="@+id/textViewpDesctiption"
                 android:layout_width="match_parent"

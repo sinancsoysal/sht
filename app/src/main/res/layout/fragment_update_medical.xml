@@ -6,12 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".UpdateMedicalFragment">
 
-    
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/mask_group_2"
+        android:background="@color/colorPrimary"
         android:isScrollContainer="true"
         android:orientation="vertical"
         tools:context=".MedicalIsertFragment">
@@ -25,12 +24,13 @@
                 android:id="@+id/addNewMedicine"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:text="@string/update_medicine_details"
                 android:textAlignment="center"
                 android:textColor="@color/theameGreen"
-                android:layout_marginTop="10dp"
                 android:textSize="20sp"
                 android:textStyle="bold" />
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="198dp">

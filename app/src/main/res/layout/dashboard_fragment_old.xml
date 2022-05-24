@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20sp"
+        android:columnCount="2"
+        android:rowCount="4">
+
+        <ImageButton
+            android:id="@+id/BtnMyAnimals"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:background="@drawable/my_animals_btn"
+            android:onClick="navigateToMyAnimal"
+            android:text="Button" />
+
+        <ImageButton
+            android:id="@+id/BtnAnimalHistory"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:background="@drawable/animal_history"
+            android:onClick="navigateToAnimalEvent"
+            android:text="Button" />
+
+        <ImageButton
+            android:id="@+id/BtnMedicine"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:background="@drawable/medicine_btn"
+            android:onClick="MedicalCabinet"
+            android:text="Button" />
+
+        <ImageButton
+            android:id="@+id/BtnFeed"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:background="@drawable/feed_btn"
+            android:onClick="navigateToFeedHostory"
+            android:text="Button" />
+
+        <ImageButton
+            android:id="@+id/BtnFertilizer"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:background="@drawable/fertilizer_btn"
+            android:onClick="navigateToFertilizer"
+            android:text="Button" />
+
+        <ImageButton
+            android:id="@+id/BtnFarmTask"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:background="@drawable/farm_task_btn"
+            android:onClick="navigateToFarmTask"
+            android:text="Button" />
+
+        <ImageButton
+            android:id="@+id/BtnMachines"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:background="@drawable/machines_btn"
+            android:onClick="navigateToMyMachinery"
+            android:text="Button" />
+
+        <ImageButton
+            android:id="@+id/BtnSprays"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:background="@drawable/sprays_bnt_green"
+            android:onClick="navigateToSprays"
+            android:text="Button" />
+
+
+    </GridLayout>
+</ScrollView>

@@ -87,37 +87,29 @@ public class login extends AppCompatActivity {
 
     private void loginWithEmailAndPassword(String email, String password) {
         firebaseAuth.signInWithEmailAndPassword(email, password)
-                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        if(e instanceof FirebaseAuthInvalidCredentialsException){
-                            TastyToast.makeText(
-                                    getApplicationContext(),
-                                    "Invalid password. Please try again !",
-                                    TastyToast.LENGTH_LONG,
-                                    TastyToast.ERROR
-                            );
-                        }else if(e instanceof FirebaseAuthInvalidUserException){
-                            TastyToast.makeText(
-                                    getApplicationContext(),
-                                    "Incorrect email address. Please try again !",
-                                    TastyToast.LENGTH_LONG,
-                                    TastyToast.ERROR
-                            );
-                        }else{
-                            TastyToast.makeText(
-                                    getApplicationContext(),
-                                    e.getLocalizedMessage(),
-                                    TastyToast.LENGTH_LONG,
-                                    TastyToast.ERROR
-                            );
-                        }
+                .addOnCompleteListener(task -> startActivity(new Intent(getApplicationContext(),MainActivity.class)))
+                .addOnFailureListener(e -> {
+                    if(e instanceof FirebaseAuthInvalidCredentialsException){
+                        TastyToast.makeText(
+                                getApplicationContext(),
+                                "Invalid password. Please try again !",
+                                TastyToast.LENGTH_LONG,
+                                TastyToast.ERROR
+                        );
+                    }else if(e instanceof FirebaseAuthInvalidUserException){
+                        TastyToast.makeText(
+                                getApplicationContext(),
+                                "Incorrect email address. Please try again !",
+                                TastyToast.LENGTH_LONG,
+                                TastyToast.ERROR
+                        );
+                    }else{
+                        TastyToast.makeText(
+                                getApplicationContext(),
+                                e.getLocalizedMessage(),
+                                TastyToast.LENGTH_LONG,
+                                TastyToast.ERROR
+                        );
                     }
                 });
     }
